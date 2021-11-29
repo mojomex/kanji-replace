@@ -18,5 +18,8 @@ for (i, kan) in enumerate(kanji):
 for (k, v) in replacements.items():
     text = text.replace(k, v)
 
+from utils.utils import save_hash_table
+save_hash_table(replacements, "hash_table")
+
 with open("output.txt", "w", encoding="utf-8") as f:
     f.write(text)
