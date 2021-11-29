@@ -25,7 +25,7 @@ def get_kanji2emoji_dict(kanji_list, emoji_names_list):
     kanji_embeddings_arr = normalize(kanji_embeddings_arr)
 
     # embed emoji
-    print("embedding kanji...: ", len(emoji_names_list))
+    print("embedding emoji...: ", len(emoji_names_list))
     emoji_embeddings_arr = embed(emoji_names_list)
     emoji_embeddings_arr = normalize(emoji_embeddings_arr)
 

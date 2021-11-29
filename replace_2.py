@@ -2,7 +2,7 @@
 import unicodedata
 from utils.create_hash_kanji2emoji import get_kanji2emoji_dict
 
-with open("input.txt", "r", encoding="utf-8") as f:
+with open("pretender.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
 kanji = set()
