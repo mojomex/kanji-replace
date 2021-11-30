@@ -44,27 +44,27 @@ def replace_texts(file_name):
     ### get dict of kanji2emoji
     kanji2emoji_meaning, kanji_meaning2emoji_meaning = get_kanji2emoji_dict(kanji_list, emoji_list)
     # save
-    os.makedirs(f"results/{file_name}", exist_ok=True)
-    with open(f"results/{file_name}/kanji2emoji_meaning.txt", "w", encoding="utf-8") as f:
+    os.makedirs(f"logs/{file_name}", exist_ok=True)
+    with open(f"logs/{file_name}/kanji2emoji_meaning.txt", "w", encoding="utf-8") as f:
         f.write(str(kanji2emoji_meaning))
-    with open(f"results/{file_name}/kanji_meaning2emoji_meaning.txt", "w", encoding="utf-8") as f:
+    with open(f"logs/{file_name}/kanji_meaning2emoji_meaning.txt", "w", encoding="utf-8") as f:
         f.write(str(kanji_meaning2emoji_meaning))
 
     replacements = {k:meaning2emoji_dict[v] for k, v in kanji2emoji_meaning.items()}
 
     from utils.utils import save_hash_table
-    save_hash_table(replacements, f"results/{file_name}/kanji2emoji")
+    save_hash_table(replacements, f"logs/{file_name}/kanji2emoji")
 
     ### replace text 
     for (k, v) in replacements.items():
         text = text.replace(k, v)
     # save
-    with open(f"results/{file_name}/output.txt", "w", encoding="utf-8") as f:
+    with open(f"outputs/{file_name}.txt", "w", encoding="utf-8") as f:
         f.write(text)
     with open("output.txt", "w", encoding="utf-8") as f:
         f.write(text)
 
-    print(f"Successfully replaced at: results/{file_name}/output.txt")
+    print(f"Successfully replaced at: logs/{file_name}/output.txt")
     print(f"Successfully replaced at: output.txt")
 
 
@@ -73,15 +73,15 @@ if __name__=="__main__":
 
     ### REPLACE ALL TEXTFILES
 
-    # import glob
-    # f_list = glob.glob("inputs/*.txt")
-    # f_list = [f.split('/')[1].replace('.txt','') for f in f_list]
-    # for FILE_NAME in f_list:
-    #     print(f"==== {FILE_NAME} ====")
-    #     replace_texts(FILE_NAME)
+    import glob
+    f_list = glob.glob("inputs/*.txt")
+    f_list = [f.split('/')[1].replace('.txt','') for f in f_list]
+    for FILE_NAME in f_list:
+        print(f"==== {FILE_NAME} ====")
+        replace_texts(FILE_NAME)
     
     ### REPLACE SINGLE TEXTFILE
-    
-    # file should be in inputs folder
-    FILE_NAME = "pretender"
-    replace_texts(FILE_NAME)
+    ## file should be in inputs folder
+
+    # FILE_NAME = "pretender"
+    # replace_texts(FILE_NAME)

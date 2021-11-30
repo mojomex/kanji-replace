@@ -1,0 +1,1 @@
+{'see': 'WATCH', 'root': 'SEEDLING', 'little': 'MAN', 'night': 'NIGHT WITH STARS', 'empty': 'NO ENTRY', 'stone': 'GEM STONE', 'star': 'GLOWING STAR', 'sea': 'SHIP', 'springtime': 'SUNFLOWER', 'gold': 'SPARKLES', 'child': 'CHILD', 'blue': 'BLUE HEART', 'daytime': 'BRIDGE AT NIGHT'}

@@ -1,0 +1,1 @@
+{'見': 'WATCH', '根': 'SEEDLING', '小': 'MAN', '夜': 'NIGHT WITH STARS', '空': 'NO ENTRY', '石': 'GEM STONE', '星': 'GLOWING STAR', '海': 'SHIP', '春': 'SUNFLOWER', '金': 'SPARKLES', '子': 'CHILD', '青': 'BLUE HEART', '昼': 'BRIDGE AT NIGHT'}
