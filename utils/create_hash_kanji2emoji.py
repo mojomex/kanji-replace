@@ -16,11 +16,17 @@ def normalize(v, axis=-1, order=2):
     return v/l2
 
 
-def get_kanji2emoji_dict(kanji_list, emoji_names_list):
+def get_kanji2emoji_dict(kanji_list, emoji_names_list, kanji_meanings_n=1):
+    """
+    kanji_meanings_n: how many meanings in dictionary to use
+        e.g. "見":'see,hopes,chances,idea,opinion,look at,visible' 
+            <= there are 8 meanings in total
+    """
 
     # embed kanji
     print("embedding kanji...: ", len(kanji_list))
     kanji_meaning_list = [get_kanji_info(kanji)[1] for kanji in kanji_list]
+    kanji_meaning_list = [' '.join(k_m.split(',')[:kanji_meanings_n]) for k_m in kanji_meaning_list]
     kanji_embeddings_arr = embed(kanji_meaning_list)
     kanji_embeddings_arr = normalize(kanji_embeddings_arr)
 

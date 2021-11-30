@@ -20,3 +20,5 @@ def load_pickle(file_name):
     with open(f"{file_name}.pkl", "rb") as f:
         d = pickle.load(f)
     return d
+
+    

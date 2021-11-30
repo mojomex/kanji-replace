@@ -1,0 +1,1 @@
+{'empty': 'NO ENTRY', 'star': 'GLOWING STAR', 'sea': 'SHIP', 'daytime': 'BRIDGE AT NIGHT', 'blue': 'BLUE HEART', 'root': 'SEEDLING', 'see': 'WATCH', 'springtime': 'SUNFLOWER', 'night': 'NIGHT WITH STARS', 'little': 'MAN', 'stone': 'GEM STONE', 'gold': 'SPARKLES', 'child': 'CHILD'}
